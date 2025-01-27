@@ -20,7 +20,7 @@ $Env:QT_ROOT = "C:\Qt"
 
 git clone https://github.com/komodoce/coins-ce/ -b master
 mkdir -p atomic_defi_design\assets\images\coins
-Get-Item -Path "coins\icons\*.png" | Move-Item -Destination "atomic_defi_design\assets\images\coins"
+Get-Item -Path "coins-ce\icons\*.png" | Move-Item -Destination "atomic_defi_design\assets\images\coins"
 
 mkdir b
 cd b
