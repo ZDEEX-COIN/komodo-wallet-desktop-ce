@@ -155,7 +155,6 @@ namespace atomic_dex
             case orderbook_model::kind::bids:
                 break;
             case orderbook_model::kind::best_orders:
-                t_float_50  limit("10000");
                 t_float_50  rates               = safe_float(this->sourceModel()->data(idx, orderbook_model::CEXRatesRole).toString().toStdString());
                 t_float_50  fiat_price          = safe_float(this->sourceModel()->data(idx, orderbook_model::PriceFiatRole).toString().toStdString());
                 bool        is_cex_id_available = this->sourceModel()->data(idx, orderbook_model::HaveCEXIDRole).toBool();
@@ -176,10 +175,6 @@ namespace atomic_dex
                     {
                         return true;
                     }
-                    return false;
-                }
-                if (is_cex_id_available && (rates > 100 || fiat_price <= 0 || ((safe_float(volume) < limit) && coin_info.coin_type != CoinType::SmartChain)))
-                {
                     return false;
                 }
                 return true;
