@@ -4,7 +4,6 @@
     </a>
 </p>
 
-
 <p align="center">
     <a href="https://github.com/komodoplatform/komodo-wallet-desktop/graphs/contributors" alt="Contributors">
         <img src="https://img.shields.io/github/contributors/komodoplatform/komodo-wallet-desktop" />
